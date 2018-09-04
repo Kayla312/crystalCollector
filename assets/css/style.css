@@ -1,0 +1,31 @@
+body {
+    background-image: url("../images/bryan-goff-353928-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size:960px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-left: 100px;
+   
+    
+}
+/* .card-text{
+    padding: 20px;
+} */
+h1 {
+    font-family: 'Dancing Script', cursive;
+}
+.badge {
+    font-size: 100px;
+    color: rgb(182, 104, 35);
+    background-color: rgb(24, 23, 23);
+    margin-bottom: 50px;
+}
+p {
+    color: rgb(182, 104, 35);
+    font-size: 20px;
+}
+.btTxt {
+    size: 50%;
+}

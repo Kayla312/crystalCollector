@@ -13,3 +13,18 @@ var sapphireNumber = [];
 // random number assigned to emerald
 var emeraldNumber = [];
 
+
+// PSUDO CODE FOR THE GAME!! ( IM GETTING MYSELF KINDA LOST WHEN I START TO JUMP AROUND)
+
+// set each crystal up so that on game load they havd a random valuble, between 1-12
+// have a random number between 19-120 established and posted on the HMTL to compare against
+// on each click of any crystal the total score adjusts accurately.
+// IF ELSE LOOP!
+// if the random number and the total score match, add 1 point to wins
+// reset the random number and crystal values
+// if the total score overshoots the random number value, add one point to losses
+// reset the random number and crystal values
+
+
+
+
