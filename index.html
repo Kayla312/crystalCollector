@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Crystals Collector</title>
+</head>
+
+<body>
+
+  <!-- The title of the page -->
+  <h1>Crystal Collector</h1>
+
+  <ul>
+      <li>
+          You will be given a random number at the start of the game!
+      </li>
+      <li>
+          There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+      </li>
+      <li>
+          You win the game by matching your total score to the radom number generated at the beginning of the game.
+          You lose if your total score goes above the value of the random number.
+      </li>
+      <li>
+          The value of each crystal is hidden from you, until you click on it.    
+      </li>
+      <li>
+        Each crystals value is shuffled at the end of every game, regardless of win or loss.
+      </li>
+
+  </ul>
+
+  <!-- This is where we will have the win counter in HTML. It initially shows 0  -->
+  <p>Wins: <span id="wins">0</span></p>
+
+  <!-- This is where we will have the loss counter in HTML. It initially shows 0 -->
+  <p>Losses: <span id="losses">0</span></p>
+
+  <!-- This is the total score as the crystals are collected and added together. Initially nothing is shown. -->
+  <p>Your Total Score: <span id="total-score">0</span></p>
+
+
+  <!-- Link to JavaScript game.js -->
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
