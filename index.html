@@ -4,15 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Crystals Collector</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <body>
 
   <!-- The title of the page -->
-  <h1>Crystal Collector</h1>
-
-  <ul>
-      <li>
+  <!-- going to have to go into the CSS to chang the size of the heading, but i think the rounded edges will look clean, we shall see -->
+  <h1 class="badge badge-pill">Crystal Collector</h1>
+<!-- created cards, using bootstrap, so that each section will be nicely closed off, but i dont have any color yet -->
+  <ul class="card" style="width: 25rem;">
+      <li class= "card-text">
           You will be given a random number at the start of the game!
       </li>
       <li>
@@ -30,15 +32,18 @@
       </li>
 
   </ul>
+  <!-- This is where the random number is displayed , so that the player knows what they are # they are trying to match -->
+  <!-- just #### now so that i have a visual to work with -->
+  <div class="card" style="width: 10rem;" id="random-number">####</div>
 
   <!-- This is where we will have the win counter in HTML. It initially shows 0  -->
-  <p>Wins: <span id="wins">0</span></p>
+  <p>Wins: <span class="card" style="width: 5rem;" id="wins">0</span></p>
 
   <!-- This is where we will have the loss counter in HTML. It initially shows 0 -->
-  <p>Losses: <span id="losses">0</span></p>
+  <p>Losses: <span class="card" style="width: 5rem;" id="losses">0</span></p>
 
   <!-- This is the total score as the crystals are collected and added together. Initially nothing is shown. -->
-  <p>Your Total Score: <span id="total-score">0</span></p>
+  <p>Your Total Score: <span class="card" style="width: 5rem;" id="total-score">0</span></p>
 
 
   <!-- Link to JavaScript game.js -->
