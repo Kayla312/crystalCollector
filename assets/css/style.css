@@ -29,3 +29,7 @@ p {
 .btTxt {
     size: 50%;
 }
+.card {
+    background-color:rgb(70, 68, 68);
+    color: rgb(211, 207, 207);
+}

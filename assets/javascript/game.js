@@ -1,8 +1,13 @@
 // crystal counter values
 var crystals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ,11, 12];
+
+// numbers for the random number to pull from 1-120
+
+var numbers = generateRandomInterger(1-120);
 // counts wins and losses
 var wins = 0;
 var losses = 0;
+var randomNumber = null;
 
 // random number assigned to ruby
 var rubyNumber = function(){
@@ -12,6 +17,11 @@ var rubyNumber = function(){
 var sapphireNumber = [];
 // random number assigned to emerald
 var emeraldNumber = [];
+
+// // update random number that will reupdate every time tne game is lost or won
+var updateRandomNumber = function() {
+    randomNumber = numbers[Math.floor(Math.random() * numbers.lenth)];
+};
 
 
 // PSUDO CODE FOR THE GAME!! ( IM GETTING MYSELF KINDA LOST WHEN I START TO JUMP AROUND)
