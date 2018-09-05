@@ -2,12 +2,15 @@
 var crystals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ,11, 12];
 
 // numbers for the random number to pull from 1-120
-
-var numbers = generateRandomInterger(1-120);
+// pushes the random number to the console for the FIRST TIME EVER WHOOP WHOOOP!!!!
+var generateRandomNumber = function generateRandomInteger(min, max) {
+    return Math.floor(min + Math.random()*(max+1 - min))
+  }
+var numbers = generateRandomNumber(1, 120);
+console.log(numbers);
 // counts wins and losses
 var wins = 0;
 var losses = 0;
-var randomNumber = null;
 
 // random number assigned to ruby
 var rubyNumber = function(){
@@ -20,8 +23,9 @@ var emeraldNumber = [];
 
 // // update random number that will reupdate every time tne game is lost or won
 var updateRandomNumber = function() {
-    randomNumber = numbers[Math.floor(Math.random() * numbers.lenth)];
+    document.querySelector('#random-number').innerHMTL = numbers;
 };
+updateRandomNumber();
 
 
 // PSUDO CODE FOR THE GAME!! ( IM GETTING MYSELF KINDA LOST WHEN I START TO JUMP AROUND)
