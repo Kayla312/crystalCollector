@@ -6,7 +6,8 @@ var crystals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ,11, 12];
 var generateRandomNumber = function generateRandomInteger(min, max) {
     return Math.floor(min + Math.random()*(max+1 - min))
   }
-var numbers = generateRandomNumber(1, 120);
+
+var numbers = generateRandomNumber(19, 120);
 console.log(numbers);
 // counts wins and losses
 var wins = 0;
