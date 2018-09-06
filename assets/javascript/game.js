@@ -33,10 +33,14 @@ for(var i = 0; i < 4; i++){
     // getting a random number between 1-12 for each of the crystals
     var randomCrystal = [Math.floor(Math.random() * crystals.length)]
     // setting the random number as an attribute on each crystal
-   $('#btxTxt') = crystal;
+    var crystal
+   crystal = $('#btxTxt')
    crystal.attr({
-       'randomNumber': randomCrystal
+       'randomNumber': randomCrystal,
+       
+    
    });
+   console.log(randomNumber)
 }
 // // random number assigned to ruby
 // var rubyNumber = function(){
@@ -71,6 +75,25 @@ then (wins++)
 // reset the random number and crystal values
 // if the total score overshoots the random number value, add one point to losses
 // reset the random number and crystal values
+
+
+// UNCOMPLETED CODE FOR THE GAME!!
+// SO MUCH WAS UNCOMPLETED THAT I FEEL LIKE JUST RE-PSUDO CODING THE WHOLE GAME, AND THEN ATTEMPTING TO CODE IT AGAIN
+
+// on page load, there are four crystals
+    // each of the four crystals is assignes a random number between 1-12
+    // every time the user clicks on a crystal it adds the accurate number to the total score
+// on page load, there should also be a random number that is visible
+    // the random number should be in between 19-120
+// if the total score, after clicking on the crystals for a while, matches the random number that is visible
+    // add 1 to the "won" area and alert the player that they have won
+    // also reload the crystal values so that they are random
+    // also also reload the random number on the page so that there is a new challenge
+// however, should the user click on the wrong crystal too many times and overshoot the random number
+    // add 1 to the 'lost' area and alert the player that they have lost that round
+    // must again reloaad the crystal values so that they are once again new
+    // also also reload the random number so that they can give another shot to beating the game
+
 
 
 
