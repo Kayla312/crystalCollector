@@ -21,11 +21,23 @@ var numbers = generateRandomNumber(19, 120);
 
 $('#random-number').html('Number to Match: ' + numbers);
 
-console.log(numbers);
+// console.log(numbers);
 
 // ATTEMPTING A NEW WAY TO CREATE THE CRYSTALS RANDOM NUMBER
+// when any of the attributs with the class btTxt submit are clicked (aka the crystals on the page) the function should fire
+$('.btTxt submit').on('click', function () {
+    
+});
 
-
+for(var i = 0; i < 4; i++){
+    // getting a random number between 1-12 for each of the crystals
+    var randomCrystal = [Math.floor(Math.random() * crystals.length)]
+    // setting the random number as an attribute on each crystal
+   $('#btxTxt') = crystal;
+   crystal.attr({
+       'randomNumber': randomCrystal
+   });
+}
 // // random number assigned to ruby
 // var rubyNumber = function(){
 //     crystals[Math.floor(Math.random() * crystals.length)]
