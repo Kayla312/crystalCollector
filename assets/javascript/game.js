@@ -80,11 +80,11 @@ then (wins++)
 // UNCOMPLETED CODE FOR THE GAME!!
 // SO MUCH WAS UNCOMPLETED THAT I FEEL LIKE JUST RE-PSUDO CODING THE WHOLE GAME, AND THEN ATTEMPTING TO CODE IT AGAIN
 
-// on page load, there are four crystals
+// ***on page load, there are four crystals
     // each of the four crystals is assignes a random number between 1-12
     // every time the user clicks on a crystal it adds the accurate number to the total score
-// on page load, there should also be a random number that is visible
-    // the random number should be in between 19-120
+// *****on page load, there should also be a random number that is visible
+    // ********the random number should be in between 19-120
 // if the total score, after clicking on the crystals for a while, matches the random number that is visible
     // add 1 to the "won" area and alert the player that they have won
     // also reload the crystal values so that they are random
@@ -95,6 +95,8 @@ then (wins++)
     // also also reload the random number so that they can give another shot to beating the game
 
 
+// ***= things i did do 
+// also, the page looks nice.... which is great if you want it to look nice...maybe not so great if you want it to function 
 
 
 
