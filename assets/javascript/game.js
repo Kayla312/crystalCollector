@@ -8,7 +8,12 @@ var generateRandomNumber = function generateRandomInteger(min, max) {
   }
 
 var numbers = generateRandomNumber(19, 120);
+
 console.log(numbers);
+
+var totalScore;
+
+
 // counts wins and losses
 var wins = 0;
 var losses = 0;
@@ -17,6 +22,9 @@ var losses = 0;
 var rubyNumber = function(){
     crystals[Math.floor(Math.random() * crystals.length)]
 };
+updateRubyNumber = function() {
+    $('#ruby').hmtl(totalScore);
+}
 // random number assigned to sapphire
 var sapphireNumber = [];
 // random number assigned to emerald
@@ -27,6 +35,10 @@ var updateRandomNumber = function() {
     document.querySelector('#random-number').innerHMTL = numbers;
 };
 updateRandomNumber();
+
+if (totalScore === numbers)
+then (wins++)
+
 
 
 // PSUDO CODE FOR THE GAME!! ( IM GETTING MYSELF KINDA LOST WHEN I START TO JUMP AROUND)
