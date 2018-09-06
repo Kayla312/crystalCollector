@@ -1,6 +1,16 @@
 // crystal counter values
 var crystals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ,11, 12];
 
+var totalScore;
+
+
+// counts wins and losses
+var wins = 0;
+var losses = 0;
+
+// GLOBAL VARIABLES ^^^^^
+
+
 // numbers for the random number to pull from 1-120
 // pushes the random number to the console for the FIRST TIME EVER WHOOP WHOOOP!!!!
 var generateRandomNumber = function generateRandomInteger(min, max) {
@@ -9,26 +19,24 @@ var generateRandomNumber = function generateRandomInteger(min, max) {
 
 var numbers = generateRandomNumber(19, 120);
 
+$('#random-number').html('Number to Match: ' + numbers);
+
 console.log(numbers);
 
-var totalScore;
+// ATTEMPTING A NEW WAY TO CREATE THE CRYSTALS RANDOM NUMBER
 
 
-// counts wins and losses
-var wins = 0;
-var losses = 0;
-
-// random number assigned to ruby
-var rubyNumber = function(){
-    crystals[Math.floor(Math.random() * crystals.length)]
-};
-updateRubyNumber = function() {
-    $('#ruby').hmtl(totalScore);
-}
-// random number assigned to sapphire
-var sapphireNumber = [];
-// random number assigned to emerald
-var emeraldNumber = [];
+// // random number assigned to ruby
+// var rubyNumber = function(){
+//     crystals[Math.floor(Math.random() * crystals.length)]
+// };
+// updateRubyNumber = function() {
+//     $('#ruby').hmtl(totalScore);
+// }
+// // random number assigned to sapphire
+// var sapphireNumber = [];
+// // random number assigned to emerald
+// var emeraldNumber = [];
 
 // // update random number that will reupdate every time tne game is lost or won
 var updateRandomNumber = function() {
