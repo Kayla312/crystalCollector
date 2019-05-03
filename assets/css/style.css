@@ -1,13 +1,16 @@
 body {
     background-image: url("../images/bryan-goff-353928-unsplash.jpg");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size:960px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-left: 100px;
-   
+    margin-left: 100px; */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-attachment: fixed;
     
 }
 /* .card-text{
