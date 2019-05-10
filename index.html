@@ -15,7 +15,8 @@
 
   <!-- The title of the page -->
   <!-- going to have to go into the CSS to chang the size of the heading, but i think the rounded edges will look clean, we shall see -->
-  <h1 class="badge badge-pill">Crystal Collector</h1>
+<div class='container'>
+  <h1 class= "badge-pill text-center">Crystal Collector</h1>
 <!-- created cards, using bootstrap, so that each section will be nicely closed off, but i dont have any color yet -->
   <div class="card" style="width: 25rem;">
       <li class= "card-text">
@@ -40,7 +41,8 @@
   <!-- This is where the random number is displayed , so that the player knows what they are # they are trying to match -->
   <!-- just #### now so that i have a visual to work with -->
   <div class="card" style="width: 10rem;" id="random-number"></div>
-
+  <br>
+  <div class="card" style="width: 10rem;" id="whatYoureWorkingWith"></div>
   <!-- This is where we will have the win counter in HTML. It initially shows 0  -->
   <p>Wins: <span class="card" style="width: 5rem;" id="wins">0</span></p>
 
@@ -48,20 +50,34 @@
   <p>Losses: <span class="card" style="width: 5rem;" id="losses">0</span></p>
   <!-- where the four crystals will go -->
 
-  <div class='crystals'>
-  <input type="image" src="assets/images/ruby.png" class="btTxt submit" id="ruby" />
-  <input type="image" src="assets/images/emerald.png" class="btTxt submit" id="emerald" />
-  <input type="image" src="assets/images/citrine.png" class="btTxt submit" id="citrine" />
-  <input type="image" src="assets/images/sapphire.png" class="btTxt submit" id="sapphire" />
+  <div class='crystals btTxt'>
+  <input type="image" src="assets/images/ruby.png"  id="ruby" />
+  <input type="image" src="assets/images/emerald.png"  id="emerald" />
+  <input type="image" src="assets/images/citrine.png"  id="citrine" />
+  <input type="image" src="assets/images/sapphire.png"  id="sapphire" />
   </div>
   <!-- <button type="button" class="btn btn-outline-dark" id="ruby">img</button> 
   <button type="button" class="btn btn-outline-dark" id="sapphire">img</button>
   <button type="button" class="btn btn-outline-dark" id="emerald">img</button>
   <button type="button" class="btn btn-outline-dark" id="citrine">img</button> -->
 
-
-  <!-- This is the total score as the crystals are collected and added together. Initially nothing is shown. -->
-  <p>Your Total Score: <span class="card" style="width: 5rem;" id="total-score">0</span></p>
+</div>
+<!-- Modal for updating to wins or losses -->
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">HOLY QUARTZ AN UPDATE</h5>
+      </div>
+      <div class="modal-body">
+        <p class="winOrLose"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   <!-- Link to JavaScript game.js -->
