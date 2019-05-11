@@ -79,43 +79,30 @@ var checkStatusOfGame = function() {
 
     // Check if currentCount is larger than endGoal
     if (currentCount > endGoal) {
-        // $('.modal').modal(option);
-        //     $('#myInput').trigger('focus');
-        //     $('winOrLose').html(
-        //         "AW SAGE! Thats a loss. Gonna have to add that one in"
-        //     );
         alert("AW SAGE! Thats a loss. Gonna have to add that one in")
-          
-      console.log("You Lost");
-  
-      // Add to Loss Counter
-      losses++;
-  
-      // Change Loss Count HTML
-      $("#losses").text(losses);
-  
-      // Restart the game
-      gameStart();
-    }
-  
-    else if (currentCount === endGoal) {
-        // $('.modal').on( function () {
-        //     $('#myInput').trigger('focus');
-        //     $('winOrLose').html(
-        //         "OKAY! I Selenite you! Thats a win! "
-        //     );
-        //   })
+            
+        console.log("You Lost");
+
+        // Add to Loss Counter
+        losses++;
+
+        // Change Loss Count HTML
+        $("#losses").text(losses);
+
+        // Restart the game
+        gameStart();
+    } else if (currentCount === endGoal) {
         alert( "OKAY! I Selenite you! Thats a win! ")
-      console.log("You Won!");
+        console.log("You Won!");
   
-      // Add to the Win Counter
-      wins++;
-  
-      // Change Win Count HTML
-      $("#wins").text(wins);
-  
-      // Restart the game
-      gameStart();
+        // Add to the Win Counter
+        wins++;
+    
+        // Change Win Count HTML
+        $("#wins").text(wins);
+    
+        // Restart the game
+        gameStart();
     }
   
   };
@@ -137,20 +124,26 @@ var checkStatusOfGame = function() {
   };
 
 
-  $('#sapphire').click(function(){
+    $('#sapphire').click(function(){
     addCrystalsUp(crystal.sapphire);
-})
+        })
     $('#ruby').click(function(){
     addCrystalsUp(crystal.ruby);
-})
+        })
     $('#emerald').click(function(){
     addCrystalsUp(crystal.emerald);
-})
+        })
     $('#citrine').click(function(){
     addCrystalsUp(crystal.citrine);
-})
+        })
 
+// call to make the game start!
 gameStart();
+
+
+
+
+
 // PSUDO CODE FOR THE GAME!! ( IM GETTING MYSELF KINDA LOST WHEN I START TO JUMP AROUND)
 
 // set each crystal up so that on game load they havd a random valuble, between 1-12
