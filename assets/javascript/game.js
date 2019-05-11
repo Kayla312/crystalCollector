@@ -1,5 +1,26 @@
 // crystal counter values
-var crystals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ,11, 12];
+var crystal = {
+    sapphire:
+        {
+            name: "sapphire",
+            value: 0
+        },
+    emerald:
+        {
+        name: "emerald",
+        value: 0
+        },
+    ruby:
+        {
+        name: "ruby",
+        value: 0
+        },
+    citrine:
+        {
+        name: "citrine",
+        value: 0
+        }
+  };
 
 var totalScore;
 
@@ -8,60 +29,118 @@ var totalScore;
 var wins = 0;
 var losses = 0;
 
+var currentCount= 0;
+var endGoal = 0;
+
 // GLOBAL VARIABLES ^^^^^
 
 
-// numbers for the random number to pull from 1-120
+// variable to generate a random number 
 // pushes the random number to the console for the FIRST TIME EVER WHOOP WHOOOP!!!!
 var generateRandomNumber = function generateRandomInteger(min, max) {
-    return Math.floor(min + Math.random()*(max+1 - min))
-  }
+    return Math.floor(min + Math.random()*(max + 1 - min))
+}
 
-var numbers = generateRandomNumber(19, 120);
+// var numbers = generateRandomNumber(19, 120);
 
-$('#random-number').html('Number to Match: ' + numbers);
+
 
 // console.log(numbers);
+var gameStart = function (){
+    // sets baseline score of zero
+    currentCount = 0;
 
-// ATTEMPTING A NEW WAY TO CREATE THE CRYSTALS RANDOM NUMBER
-// when any of the attributs with the class btTxt submit are clicked (aka the crystals on the page) the function should fire
-$('.btTxt submit').on('click', function () {
-    
-});
+    // generate a new random number to attempt to match
+    endGoal = generateRandomNumber(19, 120);
 
-for(var i = 0; i < 4; i++){
-    // getting a random number between 1-12 for each of the crystals
-    var randomCrystal = [Math.floor(Math.random() * crystals.length)]
-    // setting the random number as an attribute on each crystal
-    var crystal
-   crystal = $('#btxTxt')
-   crystal.attr({
-       'randomNumber': randomCrystal,
-       
-    
-   });
-   console.log(randomNumber)
-}
-// // random number assigned to ruby
-// var rubyNumber = function(){
-//     crystals[Math.floor(Math.random() * crystals.length)]
-// };
-// updateRubyNumber = function() {
-//     $('#ruby').hmtl(totalScore);
-// }
-// // random number assigned to sapphire
-// var sapphireNumber = [];
-// // random number assigned to emerald
-// var emeraldNumber = [];
+    //random number ( between 1 and 12) assigned for each crystal 
+    crystal.sapphire.value = generateRandomNumber(1,12);
+    crystal.emerald.value = generateRandomNumber(1,12);
+    crystal.ruby.value = generateRandomNumber(1,12);
+    crystal.citrine.value = generateRandomNumber(1,12);
 
-// // update random number that will reupdate every time tne game is lost or won
-var updateRandomNumber = function() {
-    document.querySelector('#random-number').innerHMTL = numbers;
+    $('#random-number').html('Number to Match: ' + endGoal );
+    $('#whatYoureWorkingWith').html('Current Count: ' + currentCount );
+
+    // Testing Console (cuz you NEVER KNOW WHEN SOMETHING IS GONNA BREAK)
+    console.log("end goal BAY BAY " + endGoal);
+    console.log(
+    "Blue: " + crystal.sapphire.value + 
+    " | Green: " + crystal.emerald.value + 
+    " | Red: " + crystal.ruby.value +
+    " | Yellow: " + crystal.citrine.value);
+    console.log("********************************************");
+
 };
-updateRandomNumber();
+// gameStart();
 
-if (totalScore === numbers)
-then (wins++)
+// Check if User Won or Lost and Reset the Game
+var checkStatusOfGame = function() {
+
+    // Check if currentCount is larger than endGoal
+    if (currentCount > endGoal) {
+        alert("AW SAGE! Thats a loss. Gonna have to add that one in")
+            
+        console.log("You Lost");
+
+        // Add to Loss Counter
+        losses++;
+
+        // Change Loss Count HTML
+        $("#losses").text(losses);
+
+        // Restart the game
+        gameStart();
+    } else if (currentCount === endGoal) {
+        alert( "OKAY! I Selenite you! Thats a win! ")
+        console.log("You Won!");
+  
+        // Add to the Win Counter
+        wins++;
+    
+        // Change Win Count HTML
+        $("#wins").text(wins);
+    
+        // Restart the game
+        gameStart();
+    }
+  
+  };
+
+
+  var addCrystalsUp = function(clickedCrystal) {
+
+    // Change currentCount
+    currentCount += clickedCrystal.value;
+  
+    // Change the HTML to reflect changes in currentCount
+    $("#whatYoureWorkingWith").text(currentCount);
+  
+    // Call the checkWin Function
+    checkStatusOfGame();
+  
+    // Testing Console
+    console.log("Your Score: " + currentCount);
+  };
+
+
+    $('#sapphire').click(function(){
+    addCrystalsUp(crystal.sapphire);
+        })
+    $('#ruby').click(function(){
+    addCrystalsUp(crystal.ruby);
+        })
+    $('#emerald').click(function(){
+    addCrystalsUp(crystal.emerald);
+        })
+    $('#citrine').click(function(){
+    addCrystalsUp(crystal.citrine);
+        })
+
+// call to make the game start!
+gameStart();
+
+
 
 
 
