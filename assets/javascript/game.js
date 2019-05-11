@@ -79,12 +79,13 @@ var checkStatusOfGame = function() {
 
     // Check if currentCount is larger than endGoal
     if (currentCount > endGoal) {
-        $('.modal').on( function () {
-            $('#myInput').trigger('focus');
-            $('winOrLose').html(
-                "AW SAGE! Thats a loss. Gonna have to add that one in"
-            );
-          })
+        // $('.modal').modal(option);
+        //     $('#myInput').trigger('focus');
+        //     $('winOrLose').html(
+        //         "AW SAGE! Thats a loss. Gonna have to add that one in"
+        //     );
+        alert("AW SAGE! Thats a loss. Gonna have to add that one in")
+          
       console.log("You Lost");
   
       // Add to Loss Counter
@@ -98,12 +99,13 @@ var checkStatusOfGame = function() {
     }
   
     else if (currentCount === endGoal) {
-        $('.modal').on( function () {
-            $('#myInput').trigger('focus');
-            $('winOrLose').html(
-                "OKAY! I Selenite you! Thats a win! "
-            );
-          })
+        // $('.modal').on( function () {
+        //     $('#myInput').trigger('focus');
+        //     $('winOrLose').html(
+        //         "OKAY! I Selenite you! Thats a win! "
+        //     );
+        //   })
+        alert( "OKAY! I Selenite you! Thats a win! ")
       console.log("You Won!");
   
       // Add to the Win Counter
